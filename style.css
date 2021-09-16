@@ -1,0 +1,158 @@
+/* Variables */
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+/* Gobal Rules */
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--LightGray);
+  line-height: 1.5;
+  height: fit-content;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 768px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 768px;
+  }
+}
+/* Section */
+section {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 80%;
+  box-shadow: 2px 1px 20px 0 rgba(0, 0, 0, 0.082),
+    2px 1px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container > div {
+  padding: 40px;
+}
+
+.one {
+  grid-column-start: span 2;
+  background-color: white;
+}
+
+.one h1 {
+  color: var(--Cyan);
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--BrightYellow);
+}
+
+.one p {
+  color: var(--GrayishBlue);
+}
+
+.two {
+  background-color: var(--Cyan);
+  color: white;
+  padding: 30px;
+}
+
+.two h1 {
+  margin: 10px 0;
+}
+
+.two h1 > p {
+  font-size: 16px;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+.two h5 {
+  opacity: 0.8;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 40px;
+  background-color: var(--BrightYellow);
+  color: white;
+  box-shadow: 2px 1px 20px 0 rgba(0, 0, 0, 0.082),
+    2px 1px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.three {
+  background-color: var(--Cyan);
+  opacity: 0.8;
+  color: white;
+}
+
+.three p {
+  padding-top: 15px;
+  opacity: 0.5;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 180vh;
+  }
+  section {
+    height: 162vh;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 20px;
+    height: 70%;
+  }
+  .one {
+    grid-column-start: span 1;
+  }
+  .two,
+  .three {
+    height: fit-content;
+  }
+  .attribution {
+    display: hidden;
+  }
+}
